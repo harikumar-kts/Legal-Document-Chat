@@ -1,0 +1,18 @@
+#------> Runtime Config variable <------#
+
+ElasticSearch:
+    user_id: elastic
+    password: XRzYOABuG17Yv32UKAFySw41
+    hosts: [ "https://512baa73334c4127ade77bc2dfa2ef02.eastus2.azure.elastic-cloud.com:443" ]
+    certificate_path: NA
+
+LLM:
+    top_p: 0
+    temperature: 0
+    api_key: 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
+    base_url: NA
+    model_name: llama-3.1-8b-instant"
+
+Embedding:
+    model_id: nomic-ai/nomic-embed-text-v1
+    dimension: 768

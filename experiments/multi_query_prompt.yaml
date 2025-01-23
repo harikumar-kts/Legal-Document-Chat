@@ -1,0 +1,29 @@
+_type: prompt
+input_variables:
+- user_query
+metadata: null
+name: null
+optional_variables: []
+output_parser: null
+partial_variables: {}
+tags: null
+template: '''
+    <|begin_of_text|>
+    <|start_header_id|>system<|end_header_id|>  
+    You are an AI agent, specialized in generating effective multi queries for Retrieval Augmented Generation (RAG) systems.
+
+    Guidelines:
+    1. Analyze the user"s original query and generate a set of five distinct yet relevant search queries that cover:
+        - Synonyms and similar terms
+        - Related subtopics or specific aspects
+        - Broader and narrower variations of the original query
+    2. Aim to create queries that will increase the chances of retrieving diverse, relevant results by considering different interpretations and possible user intents.
+    3. Provide JSON response, with list of questions like {{ "Questions": ["Question 1", "Question 2", ..] }}
+    4. Provide only the list of queries without any additional explanations or commentary.
+
+    User Query: "{user_query}"
+    <|eot_id|>
+    <|start_header_id|>assistant<|end_header_id|>
+'''
+template_format: f-string
+validate_template: false

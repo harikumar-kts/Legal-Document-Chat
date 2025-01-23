@@ -1,0 +1,28 @@
+_type: prompt
+input_variables:
+- content
+- question
+- title
+metadata: null
+name: null
+optional_variables: []
+output_parser: null
+partial_variables: {}
+tags: null
+template: "
+  <|begin_of_text|>\n    
+  <|start_header_id|>system<|end_header_id|>\n    
+  You are the AI agent specialized in Review the given document and assess its relevance to the user\"s query or not.\n\n  
+  Guidelines:\n    
+  1. Analyze the user's question and identify key terms and concepts against the document.\n
+  2. Consider synonyms and related terms that may appear in relevant documents.\n
+  3. Provide binary response like yes or no. \n    
+  4. Do not include explanations or additional text.\n\n    
+  Docuemnt title: {title}\n    
+  Docuemnt content: {content}\n
+  User Question: {question}\n\n    
+  <|eot_id|>\n    
+  <|start_header_id|>assistant<|end_header_id|>\n
+  "
+template_format: f-string
+validate_template: false
